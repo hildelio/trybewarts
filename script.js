@@ -28,15 +28,15 @@ counter.innerText = count + ' caracteres restantes.';
 
 const form = document.querySelector('#evaluation-form');
 form.addEventListener('submit', function(event) {
-  event.preventDefault()
+  event.preventDefault();
   const name = document.getElementById('input-name');
   const lastname = document.getElementById('input-lastname');
   const email = document.getElementById('email');
   const house = document.getElementById('house'); //confirmar se é só isso mesmo
-  const family = document.querySelector('input[name = "family"]:checked')
-  const content = document.querySelectorAll('input[name = "content"]:checked')
-  const rate = document.querySelector('input[name = "rate":checked')
-  const textarea = document.getElementById('textarea')
+  const family = document.querySelector('input[name = "family"]:checked');
+  const content = document.querySelectorAll('input[name = "content"]:checked');
+  const rate = document.querySelector('input[name = "rate":checked');
+  const textarea = document.getElementById('textarea');
 
   const object = [
     {
@@ -68,14 +68,4 @@ form.addEventListener('submit', function(event) {
       answer: textarea.value,
     }
   ]
-  
-
-
-
-  // const all = document.querySelectorAll('#evaluation-form')
-  // for (let i = 0; i < all.length; i += 1) {
-  //   console.log(all[i].value)
-  // }
-  
-  
 });
