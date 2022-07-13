@@ -4,7 +4,7 @@ const senhaLogin = document.getElementById('senha');
 login.addEventListener('submit', (event) => {
   if (emailLogin.value === 'tryber@test.com' && senhaLogin.value === '123456') {
     event.preventDefault();
-    alert('Olá Tryber!');
+    alert('Olá, Tryber!');
   } else {
     alert('Email ou senha inválidos.');
   }
