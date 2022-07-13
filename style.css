@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+}
+.header {
+  display: flex;
+  background-color: rgb(50, 167, 145);
+  justify-content: space-around;
+}
+
+.trybewarts-login {
+  display: flex;
+  align-items: center;
+}
+
+main {
+  display: flex;
+}
+
+#evaluation-form {
+  display: flex;
+  width: 675px;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+#trybewarts-forms-logo {
+  order: 1;
+  height: 500px;
+}
+
+#nomeSobrenome {
+  display: flex;
+}
+
+#emailCasa {
+  display: flex;
+}
+
+#avalia {
+  display: flex;
+}
+
+#agree {
+  display: flex;
+}
+
+#family {
+  display: flex;
+  flex-direction: column;
+  /* align-content: center;
+  justify-content: center;
+  justify-items: center; */
+}
+
