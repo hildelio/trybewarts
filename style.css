@@ -48,8 +48,5 @@ main {
 #family {
   display: flex;
   flex-direction: column;
-  /* align-content: center;
-  justify-content: center;
-  justify-items: center; */
 }
 
