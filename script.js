@@ -2,7 +2,7 @@ const login = document.querySelector('.trybewarts-login');
 const emailLogin = document.getElementById('login');
 const senhaLogin = document.getElementById('senha');
 login.addEventListener('submit', (event) => {
-  if (emailLogin.value === 'tryber@test.com' && senhaLogin.value === '123456') {
+  if (emailLogin.value === 'tryber@teste.com' && senhaLogin.value === '123456') {
     event.preventDefault();
     alert('Olá, Tryber!');
   } else {
