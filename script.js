@@ -25,7 +25,7 @@ let count = 500;
 const counter = document.getElementById('counter');
 const textarea = document.querySelector('#textarea');
 textarea.addEventListener('input', (event) => {
-  event.preventDefault()
+  event.preventDefault();
   count = 500 - (textarea.value.length);
   counter.innerText = `${count}  caracteres restantes.`;
 });
