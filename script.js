@@ -24,9 +24,9 @@ ableDisableButton();
 let count = 500;
 const counter = document.getElementById('counter');
 const textarea = document.querySelector('#textarea');
-const input = textarea.addEventListener('input', function () {
+textarea.addEventListener('input', function () {
   count = 500 - (textarea.value.length);
-  counter.innerText = count + ' caracteres restantes.';  
+  counter.innerText = `${count}  caracteres restantes.`;
 });
 
 /*
@@ -66,12 +66,12 @@ const input = textarea.addEventListener('input', function () {
 //   const name = document.getElementById('input-name');
 //   const lastname = document.getElementById('input-lastname');
 //   const email = document.getElementById('input-email');
-//   const house = document.getElementById('house'); 
+//   const house = document.getElementById('house');
 //   const family = document.querySelector('input[name = "family"]:checked');
 //   const content = document.querySelector('input[name = "content"]:checked');//confirmar se é só isso mesmo
 //   const rate = document.querySelector('input[name = "rate":checked');
 //   const textarea = document.getElementById('textarea');
-  
+
 //   const object = [
 //     {
 //       question: '-Nome- -Sobrenome-',
