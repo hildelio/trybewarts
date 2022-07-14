@@ -24,11 +24,11 @@ ableDisableButton();
 let count = 500;
 const counter = document.getElementById('counter');
 const textarea = document.querySelector('#textarea');
-textarea.addEventListener('input', myFunction());
-function myFunction() {
+textarea.addEventListener('input', (event) => {
+  event.preventDefault()
   count = 500 - (textarea.value.length);
   counter.innerText = `${count}  caracteres restantes.`;
-}
+});
 
 /*
 // const button = document.getElementById('submit-btn');
