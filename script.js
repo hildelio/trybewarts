@@ -21,33 +21,63 @@ function ableDisableButton() {
 }
 ableDisableButton();
 
-// let count = 500;
-// let counter = document.getElementById('counter');
-// const textarea = document.querySelector('#textarea');
-// textarea.addEventListener('keypress', function(event) {
-// count = 500 - (textarea.value.length + 1);
-// counter.innerText = count + ' caracteres restantes.';
-// });
+let count = 500;
+let counter = document.getElementById('counter');
+const textarea = document.querySelector('#textarea');
+textarea.addEventListener('input', function(event) {
+  count = 500 - (textarea.value.length);
+  counter.innerText = count + ' caracteres restantes.';  
+});
 
-// const form = document.querySelector('#evaluation-form');
-// form.addEventListener('submit', function(event) {
+// const button = document.getElementById('submit-btn');
+// const feedbackArea = document.getElementById('feedback-area');
+// const formDataArea = document.getElementById('form-data');
+// const formArea = document.getElementById('evaluation-form');
+
+// function createListElement(question, answer) {
+//   const liElement = document.createElement('li');
+//   liElement.innerHTML = `
+//     <strong>${question}</strong>
+//     <span>${answer}</span>
+//   `;
+//   return liElement;
+// }
+
+// function deleteMainPageContent() {
+//   feedbackArea.classList.remove('hidden');
+//   formArea.remove();
+// }
+
+// function renderFormData(formData) {
+//   deleteMainPageContent();
+
+//   for (let i = 0; i < formData.length; i += 1) {
+//     const { question, answer } = formData[i];
+//     // const question = formData[i].question;
+//     // const answer = formData[i].answer;
+//     const newElement = createListElement(question, answer);
+//     formDataArea.appendChild(newElement);
+//   }
+// }
+
+// function pegarInfo(event) {
 //   event.preventDefault();
 //   const name = document.getElementById('input-name');
 //   const lastname = document.getElementById('input-lastname');
-//   const email = document.getElementById('email');
-//   const house = document.getElementById('house'); //confirmar se é só isso mesmo
+//   const email = document.getElementById('input-email');
+//   const house = document.getElementById('house'); 
 //   const family = document.querySelector('input[name = "family"]:checked');
-//   const content = document.querySelectorAll('input[name = "content"]:checked');
+//   const content = document.querySelector('input[name = "content"]:checked');//confirmar se é só isso mesmo
 //   const rate = document.querySelector('input[name = "rate":checked');
 //   const textarea = document.getElementById('textarea');
-
+  
 //   const object = [
 //     {
 //       question: '-Nome- -Sobrenome-',
 //       answer: `${name.value} ${lastname.value}`
 //     },
 //     {
-//       question: 'Email',
+//       question: '-Email-',
 //       answer: email.value,
 //     },
 //     {
@@ -56,19 +86,22 @@ ableDisableButton();
 //     },
 //     {
 //       question: '-Família-',
-//       answer: `${family.value}`,
+//       answer: family.value.parentElement.innerText,
 //     },
 //     {
 //       question: '-Matérias Selecionadas-',
-//       answer: `${content.value}`,
+//       answer: content.value.parentElement.innerText,
 //     },
 //     {
 //       question: '-Avaliação-',
-//       answer: `${rate.value}`,
+//       answer: rate.value.parentElement.innerText,
 //     },
 //     {
 //       question: '-Observações-',
 //       answer: textarea.value,
-//     }
-//   ]
-// });
+//     },
+//   ];
+//   renderFormData(object);
+// }
+
+// button.addEventListener('click', pegarInfo);
