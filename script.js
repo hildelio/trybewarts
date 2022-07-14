@@ -22,13 +22,14 @@ function ableDisableButton() {
 ableDisableButton();
 
 let count = 500;
-let counter = document.getElementById('counter');
+const counter = document.getElementById('counter');
 const textarea = document.querySelector('#textarea');
-textarea.addEventListener('input', function(event) {
+const input = textarea.addEventListener('input', function () {
   count = 500 - (textarea.value.length);
   counter.innerText = count + ' caracteres restantes.';  
 });
 
+/*
 // const button = document.getElementById('submit-btn');
 // const feedbackArea = document.getElementById('feedback-area');
 // const formDataArea = document.getElementById('form-data');
@@ -105,3 +106,4 @@ textarea.addEventListener('input', function(event) {
 // }
 
 // button.addEventListener('click', pegarInfo);
+*/
