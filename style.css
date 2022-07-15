@@ -1,8 +1,10 @@
 /* stylelint-disable rule-empty-line-before */
 
 /* stylelint-disable comment-empty-line-before */
+
 * {
   margin: 0;
+  padding: 0;
 }
 
 .header {
@@ -16,20 +18,28 @@
   align-items: center;
 }
 
+body , html {
+  height: 100%;
+}
+
 main {
   display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-around;
 }
 
 #evaluation-form {
   display: flex;
   width: 675px;
   flex-direction: column;
-  gap: 0.5em;
+  gap: 0.1em;
 }
 
 #trybewarts-forms-logo {
   order: 1;
   height: 500px;
+  width: 50%;
 }
 
 #nomeSobrenome {
@@ -51,4 +61,39 @@ main {
 #family {
   display: flex;
   flex-direction: column;
+}
+
+.hidden {
+  display: none;
+}
+
+#form-data li {
+  margin-bottom: 1rem;
+}
+
+.main-column {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+footer {
+  text-align: center;
+  background-color: rgb(50, 167, 145);
+  padding: 2rem;
+}
+
+.column {
+  display: flex;
+  align-items: center;
+}
+
+.column img {
+  object-fit: contain;
+  width: 3rem;
+  height: 4.4rem;
+}
+
+.column h1 {
+  font-size: 2rem;
 }

@@ -30,81 +30,82 @@ textarea.addEventListener('input', (event) => {
   counter.innerText = `${count}  caracteres restantes.`;
 });
 
-/*
-// const button = document.getElementById('submit-btn');
-// const feedbackArea = document.getElementById('feedback-area');
-// const formDataArea = document.getElementById('form-data');
-// const formArea = document.getElementById('evaluation-form');
+const button = document.getElementById('submit-btn');
+const feedbackArea = document.getElementById('feedback-area');
+const formDataArea = document.getElementById('form-data');
+const formArea = document.getElementById('formPage');
 
-// function createListElement(question, answer) {
-//   const liElement = document.createElement('li');
-//   liElement.innerHTML = `
-//     <strong>${question}</strong>
-//     <span>${answer}</span>
-//   `;
-//   return liElement;
-// }
+function createListElement(question, answer) {
+  const liElement = document.createElement('li');
+  liElement.innerHTML = `
+    <strong>${question}</strong>
+    <span>${answer}</span>
+  `;
+  return liElement;
+}
 
-// function deleteMainPageContent() {
-//   feedbackArea.classList.remove('hidden');
-//   formArea.remove();
-// }
+function deleteMainPageContent() {
+  feedbackArea.classList.remove('hidden');
+  formArea.className = 'hidden';
+}
 
-// function renderFormData(formData) {
-//   deleteMainPageContent();
+function renderFormData(formData) {
+  deleteMainPageContent();
 
-//   for (let i = 0; i < formData.length; i += 1) {
-//     const { question, answer } = formData[i];
-//     // const question = formData[i].question;
-//     // const answer = formData[i].answer;
-//     const newElement = createListElement(question, answer);
-//     formDataArea.appendChild(newElement);
-//   }
-// }
+  for (let i = 0; i < formData.length; i += 1) {
+    const { question, answer } = formData[i];
+    const newElement = createListElement(question, answer);
+    formDataArea.appendChild(newElement);
+  }
+}
 
-// function pegarInfo(event) {
-//   event.preventDefault();
-//   const name = document.getElementById('input-name');
-//   const lastname = document.getElementById('input-lastname');
-//   const email = document.getElementById('input-email');
-//   const house = document.getElementById('house');
-//   const family = document.querySelector('input[name = "family"]:checked');
-//   const content = document.querySelector('input[name = "content"]:checked');//confirmar se é só isso mesmo
-//   const rate = document.querySelector('input[name = "rate":checked');
-//   const textarea = document.getElementById('textarea');
+function pegarInfo(event) {
+  event.preventDefault();
+  const name = document.getElementById('input-name');
+  const lastname = document.getElementById('input-lastname');
+  const email = document.getElementById('input-email');
+  const house = document.getElementById('house');
+  const family = document.querySelector('input[name = "family"]:checked');
+  const content = document.querySelectorAll('input[name = "content"]:checked');
+  let contentShow = [];
+  for (let i = 0; i < content.length; i += 1) {
+    const itens = content[i];
+    contentShow.push(' ' + itens.value);
+  }
+  const rate = document.querySelector('input[name = "rate"]:checked');
+  const textarea = document.getElementById('textarea');
 
-//   const object = [
-//     {
-//       question: '-Nome- -Sobrenome-',
-//       answer: `${name.value} ${lastname.value}`
-//     },
-//     {
-//       question: '-Email-',
-//       answer: email.value,
-//     },
-//     {
-//       question: '-Casa-',
-//       answer: house.value,
-//     },
-//     {
-//       question: '-Família-',
-//       answer: family.value.parentElement.innerText,
-//     },
-//     {
-//       question: '-Matérias Selecionadas-',
-//       answer: content.value.parentElement.innerText,
-//     },
-//     {
-//       question: '-Avaliação-',
-//       answer: rate.value.parentElement.innerText,
-//     },
-//     {
-//       question: '-Observações-',
-//       answer: textarea.value,
-//     },
-//   ];
-//   renderFormData(object);
-// }
+  const object = [
+    {
+      question: 'Nome:',
+      answer: `${name.value} ${lastname.value}`
+    },
+    {
+      question: 'Email:',
+      answer: email.value,
+    },
+    {
+      question: 'Casa:',
+      answer: house.value,
+    },
+    {
+      question: 'Família:',
+      answer: family.value,
+    },
+    {
+      question: 'Matérias:',
+      answer: contentShow,
+    },
+    {
+      question: 'Avaliação:',
+      answer: rate.value,
+    },
+    {
+      question: 'Observações:',
+      answer: textarea.value,
+    },
+  ];
+  renderFormData(object);
+}
 
-// button.addEventListener('click', pegarInfo);
-*/
+button.addEventListener('click', pegarInfo);
