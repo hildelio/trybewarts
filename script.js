@@ -70,7 +70,7 @@ function pegarInfo(event) {
   const contentShow = [];
   for (let i = 0; i < content.length; i += 1) {
     const itens = content[i];
-    contentShow.push(`${ itens.value}`);
+    contentShow.push(` ${itens.value}`);
   }
   const rate = document.querySelector('input[name = "rate"]:checked');
 
