@@ -67,18 +67,17 @@ function pegarInfo(event) {
   const house = document.getElementById('house');
   const family = document.querySelector('input[name = "family"]:checked');
   const content = document.querySelectorAll('input[name = "content"]:checked');
-  let contentShow = [];
+  const contentShow = [];
   for (let i = 0; i < content.length; i += 1) {
     const itens = content[i];
-    contentShow.push(' ' + itens.value);
+    contentShow.push(`${ itens.value}`);
   }
   const rate = document.querySelector('input[name = "rate"]:checked');
-  const textarea = document.getElementById('textarea');
 
   const object = [
     {
       question: 'Nome:',
-      answer: `${name.value} ${lastname.value}`
+      answer: `${name.value} ${lastname.value}`,
     },
     {
       question: 'Email:',
