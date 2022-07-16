@@ -69,18 +69,17 @@ button.addEventListener('click', (pegarInfo) => {
   const content = document.querySelectorAll('input[name = "content"]:checked');
   const contentShow = [];
   for (let i = 0; i < content.length; i += 1) {
-    const itens = content[i];
-    contentShow.push(` ${itens.value}`);
+    contentShow.push(` ${content[i].value}`);
   }
   const rate = document.querySelector('input[name = "rate"]:checked');
   const object = [
-    {question: 'Nome:', answer: `${name1.value} ${lastname.value}`},
-    {question: 'Email:', answer: email.value},
-    {question: 'Casa:', answer: house.value},
-    {question: 'Família:', answer: family.value},
-    {question: 'Matérias:', answer: contentShow},
-    {question: 'Avaliação:', answer: rate.value},
-    {question: 'Observações:', answer: textarea.value},
+    { question: 'Nome:', answer: `${name1.value} ${lastname.value}` },
+    { question: 'Email:', answer: email.value },
+    { question: 'Casa:', answer: house.value },
+    { question: 'Família:', answer: family.value },
+    { question: 'Matérias:', answer: contentShow },
+    { question: 'Avaliação:', answer: rate.value },
+    { question: 'Observações:', answer: textarea.value },
   ];
   renderFormData(object);
 });
