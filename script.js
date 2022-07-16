@@ -64,7 +64,7 @@ const lastname = document.getElementById('input-lastname');
 const email = document.getElementById('input-email');
 const house = document.getElementById('house');
 button.addEventListener('click', (pegarInfo) => {
-  pegarInfo.preventDefault()
+  pegarInfo.preventDefault();
   const family = document.querySelector('input[name = "family"]:checked');
   const content = document.querySelectorAll('input[name = "content"]:checked');
   const contentShow = [];
@@ -78,30 +78,30 @@ button.addEventListener('click', (pegarInfo) => {
       question: 'Nome:',
       answer: `${name1.value} ${lastname.value}`,
     },
-  {
-    question: 'Email:',
-    answer: email.value,
-  },
-  {
-    question: 'Casa:',
-    answer: house.value,
-  },
-  {
-    question: 'Família:',
-    answer: family.value,
-  },
-  {
-    question: 'Matérias:',
-    answer: contentShow,
-  },
-  {
-    question: 'Avaliação:',
-    answer: rate.value,
-  },
-  {
-    question: 'Observações:',
-    answer: textarea.value,
-  },
-];
-renderFormData(object);
+    {
+      question: 'Email:',
+      answer: email.value,
+    },
+    {
+      question: 'Casa:',
+      answer: house.value,
+    },
+    {
+      question: 'Família:',
+      answer: family.value,
+    },
+    {
+      question: 'Matérias:',
+      answer: contentShow,
+    },
+    {
+      question: 'Avaliação:',
+      answer: rate.value,
+    },
+    {
+      question: 'Observações:',
+      answer: textarea.value,
+    },
+  ];
+  renderFormData(object);
 });
