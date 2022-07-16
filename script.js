@@ -59,12 +59,12 @@ function renderFormData(formData) {
   }
 }
 
-function pegarInfo(event) {
-  event.preventDefault();
-  const name = document.getElementById('input-name');
-  const lastname = document.getElementById('input-lastname');
-  const email = document.getElementById('input-email');
-  const house = document.getElementById('house');
+const name1 = document.getElementById('input-name');
+const lastname = document.getElementById('input-lastname');
+const email = document.getElementById('input-email');
+const house = document.getElementById('house');
+button.addEventListener('click', (pegarInfo) => {
+  pegarInfo.preventDefault()
   const family = document.querySelector('input[name = "family"]:checked');
   const content = document.querySelectorAll('input[name = "content"]:checked');
   const contentShow = [];
@@ -73,38 +73,35 @@ function pegarInfo(event) {
     contentShow.push(` ${itens.value}`);
   }
   const rate = document.querySelector('input[name = "rate"]:checked');
-
   const object = [
     {
       question: 'Nome:',
-      answer: `${name.value} ${lastname.value}`,
+      answer: `${name1.value} ${lastname.value}`,
     },
-    {
-      question: 'Email:',
-      answer: email.value,
-    },
-    {
-      question: 'Casa:',
-      answer: house.value,
-    },
-    {
-      question: 'Família:',
-      answer: family.value,
-    },
-    {
-      question: 'Matérias:',
-      answer: contentShow,
-    },
-    {
-      question: 'Avaliação:',
-      answer: rate.value,
-    },
-    {
-      question: 'Observações:',
-      answer: textarea.value,
-    },
-  ];
-  renderFormData(object);
-}
-
-button.addEventListener('click', pegarInfo);
+  {
+    question: 'Email:',
+    answer: email.value,
+  },
+  {
+    question: 'Casa:',
+    answer: house.value,
+  },
+  {
+    question: 'Família:',
+    answer: family.value,
+  },
+  {
+    question: 'Matérias:',
+    answer: contentShow,
+  },
+  {
+    question: 'Avaliação:',
+    answer: rate.value,
+  },
+  {
+    question: 'Observações:',
+    answer: textarea.value,
+  },
+];
+renderFormData(object);
+});
